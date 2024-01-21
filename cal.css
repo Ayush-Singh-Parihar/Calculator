@@ -1,0 +1,83 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    background-image: url('calback.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    margin: 20px; /* Adjusted margin for better spacing */
+}
+
+.calcu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 15px;
+    background-color: whitesmoke;
+    margin: 10px;
+    height: auto;
+    border: 1px solid rgba(65, 4, 88, 0.125);
+    border-radius: 15px;
+    text-align: justify;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: rgb(252, 243, 243);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5rem var(--second-bg-color);
+}
+
+.display {
+    text-align: right;
+    grid-column: span 4;
+    height: 80px; 
+    background-color: aquamarine;
+    padding: 0 10px;
+    font-size: 24px;
+    width: 95%;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
+
+.equal {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 600px) {
+    .calcu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .display {
+        height: auto;
+    }
+}
